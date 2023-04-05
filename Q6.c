@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <string.h>
 
-void reverse(char* des, char* tar) {
+void reverse(char* des, char* tar){
 	int len = strlen(tar);
 	for (int i = 0; i < len; i++) {
 		des[i] = tar[len - i - 1];
@@ -24,7 +24,7 @@ void main()
 	scanf("%s", &str1);
 	printf("    입력 str2: ");
 	scanf("%s", &str2);
-
+	
 	strcpy(temp, str1);
 	strcpy(str1, str2);
 	strcpy(str2, temp);
@@ -34,7 +34,7 @@ void main()
 
 	strcpy(str3, str2);
 	printf("(3) 복사 str3=%s\n", str3);
-
+	
 	strcat(str3, " ");
 	strcat(str3, str1);
 	strcat(str3, " Computer Engineering");
