@@ -1,7 +1,9 @@
 #define _CRT_SEUCRE_NOP_WARNINGS
 #include <stdio.h>
+#include <windows.h>
 #define ROWS 3
 #define COLS 3
+
 void print_matrix(int m[ROWS][COLS]) {
 	for (int i = 0; i < ROWS; i++) {
 		for (int j = 0; j < COLS; j++) {
