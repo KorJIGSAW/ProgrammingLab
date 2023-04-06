@@ -17,7 +17,7 @@ void main()
     int blank = 0; // blank(space, tab, newline) 문자수
     int digit = 0; // 0~9 문자수
     int special = 0; // 특수문자 수
-    int count[26] = { 0 };//알파벳별로 count
+    int count[26] = { 0 };//알파로 count
     while ((c = getchar()) != EOF) { //
         // 알파벳 카운트 부분
         total++;
