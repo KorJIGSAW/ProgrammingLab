@@ -8,8 +8,8 @@ typedef struct matrix {
 }Matrix;
 
 void print_matrix(Matrix *m) {
-	for (int i = 0; i < MAXROWS; i++) {
-		for (int j = 0; j < MAXCOLS; j++) {
+	for (int i = 0; i < m->rows; i++) {
+		for (int j = 0; j < m->cols; j++) {
 			printf("%d ", m->data[i][j]);
 		}
 		printf("\n");
@@ -17,29 +17,27 @@ void print_matrix(Matrix *m) {
 }
 
 void add_matrix(Matrix *a, Matrix *b, Matrix *c) {
-	for (int i = 0; i < MAXROWS; i++) {
-		for (int j = 0; j < MAXCOLS; j++) {
+	for (int i = 0; i < c->cols; i++) {
+		for (int j = 0; j < c->rows; j++) {
 			c->data[i][j] = a->data[i][j] + b->data[i][j];
 		}
-		printf("\n");
 	}
 }
 
 void sub_matrix(Matrix* a, Matrix* b, Matrix* c) {
-	for (int i = 0; i < MAXROWS; i++) {
-		for (int j = 0; j < MAXCOLS; j++) {
-			c->data[i][j] = a->data[i][j] - b->data[i][j];
+	for (int i = 0; i < c->cols; i++) {
+		for (int j = 0; j < c->rows; j++) {
+			c->data[i][j] = b->data[i][j] - a->data[i][j];
 		}
-		printf("\n");
 	}
 }
 
 
 int main() {
-
-	Matrix A = {3,3,{1,2,3},{4,5,6},{7,8,9}} };
-	Matrix B = {3,3,{11,12,13}, {14,15,16}, {17,18,19}} };
-	Matrix C = { 0, };
+	printf("2071360 이종범\n");
+	Matrix A = { 3,3,{{1,2,3},{4,5,6},{7,8,9}} };
+	Matrix B = { 3,3,{{11,12,13}, {14,15,16}, {17,18,19}} };
+	Matrix C = { 3,3, };
 	
 	printf("A의 행렬은 : \n");
 	print_matrix(&A);

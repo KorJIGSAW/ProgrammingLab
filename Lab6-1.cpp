@@ -18,7 +18,6 @@ void add_matrix(int a[ROWS][COLS], int b[ROWS][COLS], int c[ROWS][COLS]) {
 		for (int j = 0; j < COLS; j++) {
 			c[i][j] = a[i][j] + b[i][j];
 		}
-		printf("\n");
 	}
 }
 
@@ -27,11 +26,11 @@ void sub_matrix(int a[ROWS][COLS], int b[ROWS][COLS], int c[ROWS][COLS]) {
 		for (int j = 0; j < COLS; j++) {
 			c[i][j] = a[i][j] - b[i][j];
 		}
-		printf("\n");
 	}
 }
 
-int main() {
+int main() {;
+	printf("2071360 ÀÌÁ¾¹ü\n");
 	int A[ROWS][COLS] = { {1,2,3},{4,5,6},{7,8,9} };
 	int B[ROWS][COLS] = { {11,12,13},{14,15,16},{17,18,19} };
 	int C[ROWS][COLS] = { 0, };
