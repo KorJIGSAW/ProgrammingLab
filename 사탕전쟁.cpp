@@ -55,6 +55,10 @@ void turn_over(int* candys, int n)
 			else {
 				candys[i + 1] += plus[i];
 			}
+			/*
+			candys[(i+1)%n] += plus[i];
+			위식을 간축화한식.
+			*/
 		}
 		printf("전달");
 	}

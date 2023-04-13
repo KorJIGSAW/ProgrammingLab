@@ -53,6 +53,7 @@ void main(void)
 	scanf("%s", name); // 이름 입력
 	for (i = 0; i < count; i++) { // 자료 찾기
 		// 같은 이름을 찾아서 맞으면  break
+		//시험문제로 글자 한자주면 바로 break내는 strstr함수 사용문제나올수도있음.
 		if (strcmp(name,(data+i)->name) == 0) // 찾으면 break
 			break;
 	}
