@@ -57,6 +57,16 @@ int main() {
 	while (ntest--) {
 		scanf("%s", str);
 		len = strlen(str);
+		for (i = 0; i <= 25; i++) {
+			for (j = 0; j < len; j++) {
+				if (str[j] == 'A' + i || str[j] == 'a' + i) {
+					if (toupper(str[j]) != toupper(last_c)) {
+						putchar(str[j]);
+						last_c = str[j];
+					}
+				}
+			}
+		}
 		for (i = 0; i < 5; i++) {
 			for (j = 0; j < len; j++) {
 				if (str[j] == mo_u[i] || str[j] == mo_l[i]) {
@@ -68,16 +78,7 @@ int main() {
 				}
 			}
 		}
-		for (i = 0; i <= 25; i++) {
-			for (j = 0; j < len; j++) {
-				if (str[j] == 'A' + i || str[j] == 'a' + i) {
-					if (toupper(str[j]) != toupper(last_c)) {
-						putchar(str[j]);
-						last_c = str[j];
-					}
-				}	
-			}
-		}
+		
 		printf("\n");
 	}
 }

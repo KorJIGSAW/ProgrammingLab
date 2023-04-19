@@ -46,7 +46,7 @@ void turn_over(int* candys, int n)
 	int plus[10];
 	if (debug) {
 		for (int i = 0; i < n; i++) {
-				plus[i] = candys[i] /= 2;
+			plus[i] = candys[i] /= 2;
 		}
 		for (int i = 0; i < n; i++) {
 			if (i == n - 1) {
@@ -55,10 +55,6 @@ void turn_over(int* candys, int n)
 			else {
 				candys[i + 1] += plus[i];
 			}
-			/*
-			candys[(i+1)%n] += plus[i];
-			위식을 간축화한식.
-			*/
 		}
 		printf("전달");
 	}
@@ -96,7 +92,7 @@ void main()
 		// n==1이면 즉시 끝난다.
 		if (n == 1) {
 			break;
-			}
+		}
 		print_candys(round, candys, n);
 		// 모든 사람을 짝수개로 만들고
 		make_even(candys, n);
