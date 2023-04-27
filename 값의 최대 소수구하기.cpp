@@ -1,11 +1,22 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
+
+
 int isprime(int a) {
-	for (int i = 2; i <= a / 2; i++) {
-		if (a % i == 0)
-			return 0;
+	int prime[30] = {0,};
+	for (int i = 0; i < 30; i++) {
+		for (int j = 2; j <= a / 2; j++) {
+			if (a % j == 0)
+				break;
+		}
+		prime[i] = a;
 	}
-	return a;
+	for (int i = 0; i < 30; i++) {
+		if (prime[i] == a) {
+			return i;
+		}
+	}
+	return 0;
 }
 int main()
 {
